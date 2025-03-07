@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.text-xxs {
+  font-size: 0.625rem;
+}
