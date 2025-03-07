@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/tailwind.css';
 import ImageSlider from './components/ImageSlider';
+
 const App = () => {
   return (
     <div className="font-serif bg-gray-50 min-h-screen ">
@@ -57,7 +58,9 @@ const App = () => {
           </div>
         </div>
       </section>
+
       <ImageSlider />
+
       {/* Features Section */}
       <section id="features" className="py-12 sm:py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -459,20 +462,6 @@ const App = () => {
   );
 };
 
-// Feature card component
-const FeatureCard = ({ icon, title, description }) => {
-  return (
-    <div className="p-4 sm:p-6 bg-white border rounded-lg shadow-sm hover:shadow-lg transition-shadow">
-      <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 mb-4 text-blue-600">
-        {icon}
-      </div>
-      <h3 className="mb-2 text-lg sm:text-xl font-semibold">{title}</h3>
-      <p className="text-sm sm:text-base text-gray-600">{description}</p>
-    </div>
-  );
-};
-
-
 const FeatureListItem = ({ text }) => {
   return (
     <li className="flex items-start">
@@ -483,7 +472,6 @@ const FeatureListItem = ({ text }) => {
     </li>
   );
 };
-
 
 const features = [
   {
