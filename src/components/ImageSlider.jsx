@@ -69,7 +69,7 @@ const ImageSlider = () => {
                 <div className="flex justify-center items-center h-full">
                   <img
                     src={image}
-                    alt={`Slide ${index + 1}`}
+                    alt={`Slide ${(index + 1)%15}`}
                     className="w-full h-full object-contain rounded-lg shadow-lg"
                   />
                 </div>
