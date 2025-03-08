@@ -273,6 +273,43 @@ const App = () => {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">
+            Case Studies
+          </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Explore how our virtual classroom solutions have transformed learning experiences for educational institutions.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study) => (
+              <div
+                key={study.id}
+                className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <img
+                  src={study.image}
+                  alt={study.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-blue-900 mb-4">
+                    {study.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 text-sm">
+                    {study.description}
+                  </p>
+                  <p className="text-gray-400 text-sm">
+                    <span className="text-blue-500 font-medium">Outcome:</span> {study.outcome}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Custom Room Section */}
       <section className="bg-blue-100 py-20">
         <div className="container mx-auto px-4">
@@ -591,6 +628,30 @@ const features = [
     title: "Continuous Updates",
     description: "Regular feature enhancements based on your feedback and needs."
   }
+];
+
+const caseStudies = [
+  {
+    id: 1,
+    title: "Enhancing Learning at Green Valley High School",
+    description: "Green Valley High School faced challenges in engaging students during remote learning. Our virtual classroom solution provided interactive tools and seamless integration with their existing LMS.",
+    image: "https://wr1ter.com/wp-content/uploads/2023/07/Digital-Learning-Opportunities-and-Challenges.jpg", // Replace with actual image URL
+    outcome: "Student engagement increased by 40%, and teachers reported a 30% reduction in administrative tasks.",
+  },
+  {
+    id: 2,
+    title: "Scaling Online Learning for Bright Minds Academy",
+    description: "Bright Minds Academy needed a scalable solution to accommodate their growing student population. Our platform offered robust scalability and real-time collaboration features.",
+    image: "https://campustechnology.com/-/media/EDU/CampusTechnology/2021-images/20210317onlinelearning.jpg", // Replace with actual image URL
+    outcome: "The academy successfully onboarded 500+ students within a month, with 95% satisfaction rate.",
+  },
+  {
+    id: 3,
+    title: "Improving Accessibility at Horizon College",
+    description: "Horizon College required a solution that was accessible to students with disabilities. Our virtual classroom platform included screen reader support and customizable interfaces.",
+    image: "https://cdn.prod.website-files.com/61a05ff14c09ecacc06eec05/61f5868b789816331ac6af01_5_Benefits_of_Online_Education.png", // Replace with actual image URL
+    outcome: "Accessibility compliance achieved, and student participation increased by 25%.",
+  },
 ];
 
 export default App;
