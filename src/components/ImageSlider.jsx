@@ -42,9 +42,9 @@ const ImageSlider = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="mb-8 text-3xl sm:text-4xl font-bold text-center text-gray-900">
+    <section className="py-12 px-40 sm:py-20 bg-white">
+      <div className="container mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900">
           Explore Our Virtual Classroom
         </h2>
         <div className="h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px]">
@@ -53,16 +53,16 @@ const ImageSlider = () => {
             centeredSlides={true}
             autoplay={{
               delay: 2500,
-              disableOnInteraction: false, // Autoplay continues after interaction
+              disableOnInteraction: false, 
             }}
-            speed={800} // Smooth transition speed (in milliseconds)
-            effect="fade" // Smooth fade effect
+            speed={1000} 
+            effect="fade" 
             pagination={{
               clickable: true,
             }}
             navigation={true}
-            modules={[Autoplay, Pagination, Navigation, EffectFade]} // Add EffectFade module
-            className="h-full transition-all duration-500 ease-in-out" // Smooth transitions
+            modules={[Autoplay, Pagination, Navigation, EffectFade]}
+            className="h-full transition-all duration-500 ease-in-out"
           >
             {images.map((image, index) => (
               <SwiperSlide key={index}>

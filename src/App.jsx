@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/tailwind.css';
 import ImageSlider from './components/ImageSlider';
+import Title from './assets/title.png';
 
 const App = () => {
   return (
@@ -33,28 +34,35 @@ const App = () => {
 
       {/* Hero Section */}
       <section className="relative py-12 sm:py-20 bg-gradient-to-b from-blue-100 to-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="mb-4 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 animate-fade-in">
-            Virtual Classroom
-          </h1>
-          <h2 className="mb-6 text-lg sm:text-xl md:text-2xl text-blue-800 animate-fade-in">
-            Your Fully Customized Online Learning Ecosystem
-          </h2>
-          <p className="max-w-2xl mx-auto mb-8 text-sm sm:text-base md:text-lg text-gray-700 animate-fade-in">
-            Experience a bespoke virtual classroom solution with your own dedicated domain, tailored
-            features, and seamless integration. We handle all the technical complexities, allowing you to
-            focus solely on delivering exceptional education.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up">
-            <button className="px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">
-              Request a Demo
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-5 sm:h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </button>
-            <button className="px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base text-blue-600 bg-white rounded-md hover:bg-blue-50 transition-colors">
-              Contact Sales
-            </button>
+        <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center">
+          <div className=" px-10 sm:w-1/2 mb-8 sm:mb-0 sm:pr-8 animate-fade-in">
+            <img src={Title} alt="Virtual Classroom" className="w-full h-auto rounded-lg shadow-lg" />
+          </div>
+
+          {/* Text content on the right */}
+          <div className="w-full ml-10 sm:w-1/2 text-center sm:text-left">
+            <h1 className="mb-4 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 animate-fade-in">
+              Virtual Classroom
+            </h1>
+            <h2 className="mb-6 text-lg sm:text-xl md:text-2xl text-blue-800 animate-fade-in">
+              Your Fully Customized Online Learning Ecosystem
+            </h2>
+            <p className="max-w-2xl mx-auto mb-8 text-sm sm:text-base md:text-lg text-gray-700 animate-fade-in">
+              Experience a bespoke virtual classroom solution with your own dedicated domain, tailored
+              features, and seamless integration. We handle all the technical complexities, allowing you to
+              focus solely on delivering exceptional education.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up">
+              <button className="px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">
+                Request a Demo
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-5 sm:h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+              <button className="px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base text-blue-600 bg-white rounded-md hover:bg-blue-50 transition-colors">
+                Contact Sales
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -74,7 +82,7 @@ const App = () => {
                 className="group relative p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2"
               >
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-200 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
 
                 {/* Card content */}
                 <div className="relative z-10">
@@ -99,7 +107,7 @@ const App = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Step 1 */}
             <div className="group p-6 sm:p-8 text-center bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div className="flex items-center justify-center w-14 h-14 mx-auto mb-6 text-white bg-gradient-to-r from-blue-500 to-white-800 rounded-full">
+              <div className="flex items-center justify-center w-14 h-14 mx-auto mb-6 text-white bg-gradient-to-r from-blue-500 to-purple-200 rounded-full">
                 <span className="text-xl font-semibold">1</span>
               </div>
               <h3 className="mb-4 text-xl font-semibold text-gray-900">Consultation & Planning</h3>
@@ -110,7 +118,7 @@ const App = () => {
 
             {/* Step 2 */}
             <div className="group p-6 sm:p-8 text-center bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div className="flex items-center justify-center w-14 h-14 mx-auto mb-6 text-white bg-gradient-to-r from-blue-500 to-white-800 rounded-full">
+              <div className="flex items-center justify-center w-14 h-14 mx-auto mb-6 text-white bg-gradient-to-r from-blue-500 to-purple-200 rounded-full">
                 <span className="text-xl font-semibold">2</span>
               </div>
               <h3 className="mb-4 text-xl font-semibold text-gray-900">Development & Integration</h3>
@@ -121,7 +129,7 @@ const App = () => {
 
             {/* Step 3 */}
             <div className="group p-6 sm:p-8 text-center bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div className="flex items-center justify-center w-14 h-14 mx-auto mb-6 text-white bg-gradient-to-r from-blue-500 to-white-800 rounded-full">
+              <div className="flex items-center justify-center w-14 h-14 mx-auto mb-6 text-white bg-gradient-to-r from-blue-500 to-purple-200 rounded-full">
                 <span className="text-xl font-semibold">3</span>
               </div>
               <h3 className="mb-4 text-xl font-semibold text-gray-900">Launch & Ongoing Support</h3>
@@ -192,7 +200,7 @@ const App = () => {
       </section>
 
       {/* Custom Solution Section */}
-      <section className="py-16 sm:py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-gray-50 to-gray-20">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Heading with animation */}
           <h2
@@ -265,12 +273,40 @@ const App = () => {
         </div>
       </section>
 
+      {/* Custom Room Section */}
+      <section className="bg-blue-100 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">
+              Ready for Your Custom Virtual Classroom?
+            </h2>
+            <p className="text-blue-700 mb-8">
+              Join leading educational institutions using tailored Virtual Classroom solutions to deliver exceptional online learning experiences.
+            </p>
+            <div className="space-x-4">
+              <a
+                href="#consultation"
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+              >
+                Schedule a Consultation
+              </a>
+              <a
+                href="#contact"
+                className="bg-transparent border border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section id="contact" className="py-12 sm:py-20 bg-white">
+      <section id="contact" className="py-12 sm:py-20 bg-gradient-to-b from-gray-90 to-white">
         <div className="container mx-auto px-4">
           {/* Heading with animation */}
           <h2
-            className="mb-8 sm:mb-12 text-2xl sm:text-3xl font-bold text-center text-gray-900"
+            className="mb-8 sm:mb-12 text-3xl sm:text-4xl font-bold text-center text-gray-900"
             data-aos="fade-up"
             data-aos-duration="500"
           >
@@ -278,39 +314,43 @@ const App = () => {
           </h2>
 
           {/* Grid layout for contact details and form */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
             {/* Left Column: Contact Details */}
-            <div data-aos="fade-right" data-aos-duration="600">
-              <h3 className="mb-4 text-lg sm:text-xl font-semibold text-gray-800">
+            <div
+              className="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-100"
+              data-aos="fade-right"
+              data-aos-duration="600"
+            >
+              <h3 className="mb-6 text-xl sm:text-2xl font-semibold text-gray-900">
                 Discuss Your Custom Solution
               </h3>
               <p className="mb-6 text-sm sm:text-base text-gray-600">
                 Ready to explore how a custom Virtual Classroom solution can transform your institution's
                 online learning? Our team is here to discuss your unique needs and create a tailored plan.
               </p>
-              <ul className="mb-6 space-y-3">
+              <ul className="mb-8 space-y-4">
                 <FeatureListItem text="In-depth consultation to understand your requirements" />
                 <FeatureListItem text="Custom development roadmap for your institution" />
                 <FeatureListItem text="Transparent pricing and flexible implementation plans" />
               </ul>
 
               {/* Contact Information */}
-              <div className="mb-6 space-y-3">
+              <div className="mb-8 space-y-4">
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-6 h-6 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                   <span className="text-sm sm:text-base text-gray-700">hello@simpech.com</span>
                 </div>
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-6 h-6 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   <span className="text-sm sm:text-base text-gray-700">+91 76459 18958</span>
                 </div>
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-6 h-6 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   <span className="text-sm sm:text-base text-gray-700">+1 (332) 333-3759</span>
@@ -319,7 +359,7 @@ const App = () => {
 
               {/* Schedule Consultation Button */}
               <button
-                className="flex items-center px-6 py-3 text-sm sm:text-base text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+                className="w-full sm:w-auto flex items-center justify-center px-6 py-3 text-sm sm:text-base text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg"
                 data-aos="fade-up"
                 data-aos-duration="600"
               >
@@ -331,55 +371,57 @@ const App = () => {
             </div>
 
             {/* Right Column: Contact Form */}
-            <div data-aos="fade-left" data-aos-duration="600">
-              <h3 className="mb-4 text-lg sm:text-xl font-semibold text-gray-800">
+            <div
+              className="bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-100"
+              data-aos="fade-left"
+              data-aos-duration="600"
+            >
+              <h3 className="mb-6 text-xl sm:text-2xl font-semibold text-gray-900">
                 Request More Information
               </h3>
               {/* Form Box */}
-              <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6 sm:p-8">
-                <form className="space-y-4">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Your Name"
-                      className="w-full p-3 text-sm sm:text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Your Email"
-                      className="w-full p-3 text-sm sm:text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="tel"
-                      placeholder="Your Phone with country code"
-                      className="w-full p-3 text-sm sm:text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Institution / Organisation Name"
-                      className="w-full p-3 text-sm sm:text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
-                    />
-                  </div>
-                  <div>
-                    <textarea
-                      placeholder="Tell us about your specific needs and customization requirements"
-                      className="w-full p-3 text-sm sm:text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
-                      rows={4}
-                    ></textarea>
-                  </div>
-                  <button
-                    className="w-full p-3 text-sm sm:text-base text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
-                  >
-                    Send Request
-                  </button>
-                </form>
-              </div>
+              <form className="space-y-6">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full p-3 text-sm sm:text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full p-3 text-sm sm:text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="Your Phone with country code"
+                    className="w-full p-3 text-sm sm:text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Institution / Organisation Name"
+                    className="w-full p-3 text-sm sm:text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    placeholder="Tell us about your specific needs and customization requirements"
+                    className="w-full p-3 text-sm sm:text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                    rows={4}
+                  ></textarea>
+                </div>
+                <button
+                  className="w-full p-3 text-sm sm:text-base text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg"
+                >
+                  Send Request
+                </button>
+              </form>
             </div>
           </div>
         </div>
